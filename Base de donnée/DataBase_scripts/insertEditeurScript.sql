@@ -1,0 +1,22 @@
+INSERT INTO public.editeur(
+	id_editeur, nom, pays, date_de_fondation)
+	VALUES (1, 'Rockstar Games', 'United States', '1998-12-01'),
+    (2, 'Ubisoft', 'France', '1986-03-28'),
+    (3, 'Electronic Arts', 'United States', '1982-05-27'),
+    (4, 'Nintendo', 'Japan', '1889-09-23'),
+    (5, 'Sony Interactive Entertainment', 'Japan', '1993-11-16'),
+    (6, 'Bethesda Softworks', 'United States', '1986-06-28'),
+    (7, 'Square Enix', 'Japan', '1986-04-01'),
+    (8, 'Capcom', 'Japan', '1979-05-30'),
+    (9, 'Bandai Namco Entertainment', 'Japan', '2005-03-31'),
+    (10, 'Activision Blizzard', 'United States', '2008-07-09'),
+    (11, 'SEGA', 'Japan', '1960-06-03'),
+    (12, 'Konami', 'Japan', '1969-03-21'),
+    (13, 'CD Projekt Red', 'Poland', '1994-05-01'),
+    (14, 'Valve Corporation', 'United States', '1996-08-24'),
+    (15, 'Epic Games', 'United States', '1991-01-01'),
+    (16, 'THQ Nordic', 'Austria', '2011-06-01'),
+    (17, 'Warner Bros. Interactive Entertainment', 'United States', '1993-01-01'),
+    (18, '2K Games', 'United States', '2005-01-25'),
+    (19, 'Paradox Interactive', 'Sweden', '1999-01-01'),
+    (20, 'Koei Tecmo', 'Japan', '2009-04-01');
