@@ -1,0 +1,296 @@
+body{
+    background-color: black;
+}
+
+header {
+    height: 110px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    border:0;
+    border-top: 5px black solid;
+    border-bottom: 10px black solid;
+    background-image: linear-gradient(rgb(51, 51, 51),rgb(84, 84, 84)); 
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    
+}
+header div{
+    display: flex;
+    align-items: center;
+}
+header div img {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+header div input {
+    height: 45px;
+    width: 370px;
+    border-radius: 30px;
+    border: transparent;
+    margin-right: 5px;
+    margin-left: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    text-indent: 5px;
+}
+
+#SearchButton {
+    height: 45px;
+    width: 45px;
+    border-radius: 30px;
+    border: transparent;
+    background-color: white;
+    position: relative;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+#SearchIcon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    right: 3px;
+    top: 2px;
+}
+
+
+#LoginButton{
+    background-color: white;
+    border: transparent;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    color:  rgb(0, 102, 255);
+    cursor: pointer;
+}
+
+#RegisterButton{
+    background-color: rgb(0, 102, 255);
+    border: transparent;
+    height: 30px;
+    width: 60px;
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+}
+
+.whiteShadow:hover{
+    box-shadow: 0px 0px 4px white;
+}
+
+
+section{
+    display: flex;
+    flex-grow: 1;
+}
+
+.menu {
+    border-radius: 10px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-right: 15px;
+    background-color: rgb(59, 59, 59);
+    overflow: hidden;
+    transition: width 0.5s;
+    flex-shrink: 0;
+    position: sticky;
+    top: 123px; 
+    height: max-content;
+    padding: 10px 0; 
+}
+
+#settings{
+    margin-top: 120px;
+}
+
+#logout{
+    margin-bottom: 2px;
+}
+
+.menu:hover{
+    width: 240px;
+    #menuIcon{
+        width: 14%;
+    }
+}
+
+.menu div {
+    background-color: rgb(59, 59, 59);
+    margin: 4px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+#menuIcon {
+    height: 80%; 
+    width: 75%; 
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+#menuText {
+    font-size: 20px; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+.menu :hover{
+    background-color: white;
+}
+
+.Announcement{
+    margin : 125px 30px 100px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    justify-content: space-around;
+    position: relative;
+    right: 15px;
+}
+
+.annonce{
+   
+    min-height: 350px;
+    min-width: 140px; 
+    border-radius: 10px;
+    transition: width 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.annonce:hover{
+    width: 300%;
+    box-shadow: 0px 0px 3px white;
+}
+
+.annonce img {
+    height: 350px;
+    width: 665px;
+}
+
+.Listegames{
+    background-color: rgb(59, 59, 59);
+    border: solid;
+    border-radius: 10px;
+    width:1000px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    flex-grow: 1;
+    overflow: hidden;
+    
+}
+
+
+.Listegames div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 230px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.Listegames h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 15px;
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    text-shadow: 0px 0px 5px white;
+}
+
+#Game{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#game {
+    height: 230px;
+    width: 170px;
+    background-color: aliceblue;
+    cursor: pointer;
+    transition: height 0.3s, width 0.3s;
+}
+
+#game:hover{
+    height: 240px;
+    width: 180px;
+    box-shadow: 0px 0px 5px white;
+}
+
+#game img {
+    height: inherit;
+    width: inherit;
+}
+
+footer{
+    margin-top: 15px;
+    padding: 30px;
+    height: auto;
+    background-color: rgb(59, 59, 59);
+    border-radius: 10px;
+}
+
+footer img {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    transition: height 0.3s, width 0.3s;
+}
+
+footer img:hover {
+    height: 43px;
+    width: 43px;
+}
+
+.footerTxt{
+    color: white;
+    padding-right: 50%;
+    font-size: 14px;
+}
+
+.footerDiv{
+    display: flex;
+    gap: 13px;
+    color: white;
+    align-items: center;
+}
+
+.footerDiv p{
+    transition: font-size 0.3s;
+
+}
+
+.footerDiv p:hover{
+    cursor: pointer;
+    font-size: 17px;
+}
