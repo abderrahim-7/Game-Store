@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="profil.css">
+    <script src="profil.js" defer></script>
     <title>Game Store</title>
     <link rel="icon" href="images/8695383.png">
     
@@ -17,18 +17,15 @@
                 <input type="text" placeholder="search here..." class="whiteShadow">
                 <button class="whiteShadow" id="SearchButton"><img src="images/search_Icon.png" alt="" id="SearchIcon"></button>
             </div>
-            <div>
-                <a href="login.html"><button class="whiteShadow" id="LoginButton">Login</button></a>
-                <a href="registre.html"> <button class="whiteShadow" id="RegisterButton" >Register</button> </a>
-            </div>
+
     </header>
 
-    <section>
+    <main>
         <div class="menu">
-            <div class="menuDiv" style="background-color: white;">
+            <div class="menuDiv" " onclick="window.location.href='index.html'">
                 <img src="images/home_icon.png" alt="" id="menuIcon">
             </div>
-            <div class="menuDiv" onclick="window.location.href='profil.html'">
+            <div class="menuDiv"  style="background-color: white;" onclick="window.location.href='profil.html'">
                 <img src="images/profile_Icon.png" alt="" id="menuIcon">
             </div>
             <div class="menuDiv">
@@ -43,14 +40,44 @@
         </div>
         
         <div class="Listegames">
-        
-            <div class="Announcement">
-                <div class="annonce"><img src="images/discount.avif" alt=""></div>
-                <div class="annonce"><img src="images/annonce2.png" alt=""></div>
-                <div class="annonce"><img src="images/annonce3.jpg" alt=""></div>
+          <section class="profile-card">
+            <div class="profile-avatar">
+              <img src="images/avatar1.png" alt="Avatar de l'utilisateur" />
             </div>
-            
-            <h2>Recommended</h2>
+    
+            <div class="profile-info">
+              <!-- EMAIL -->
+              <div class="profile-field">
+                <label>Email :</label>
+                <span id="profileEmailValue">john.doe@gmail.com</span>
+                <input type="email" id="profileEmailInput" class="profile-edit-input" style="display: none;" />
+                <button class="edit-field-btn" data-field="email">
+                  <img src="images/crayon.png" alt="Edit" />
+                </button>
+              </div>
+    
+              <!-- PSEUDONYME -->
+              <div class="profile-field">
+                <label>Pseudonyme :</label>
+                <span id="profilePseudoValue">John Doe</span>
+                <input type="text" id="profilePseudoInput" class="profile-edit-input" style="display: none;" />
+                <button class="edit-field-btn" data-field="pseudo">
+                  <img src="images/crayon.png" alt="Edit" />
+                </button>
+              </div>
+    
+              <!-- MOYEN DE PAIEMENT -->
+              <div class="profile-field">
+                <label>Moyen de paiement :</label>
+                <span id="profilePaymentValue">Visa se terminant par 1234</span>
+                <button class="edit-field-btn" data-field="payment">
+                  <img src="images/crayon.png" alt="Edit" />
+                </button>
+              </div>
+            </div>
+          </section>
+
+            <h2>WishList</h2>
             <div class="Recommended">
                 <div id="Game">
                     <div id="game"><img src="images/games/Grand_Theft_Auto_V/0.png" alt=""></div>
@@ -58,9 +85,9 @@
                     <p style="margin: 0; color: white;">59.99 $</p>
                 </div>
                 <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
+                    <div id="game"><img src="images/games/game fifa 2024.png" alt=""></div>
                     <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
+                    <p style="margin: 0; color: white;">45.78 $</p>
                 </div>
                 <div id="Game">
                     <div id="game"><img src="" alt=""></div>
@@ -78,65 +105,34 @@
                     <p style="margin: 0; color: white;">price $</p>
                 </div>
             </div>
-            <h2>Sales</h2>
-            <div class="Sales">
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
-                </div>
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
-                </div>
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
-                </div>
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
-                </div><div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
-                </div>
-            </div>
-            <h2>New</h2>
+
+            <h2>Bibliothèque</h2>
             <div class="New">
                 <div id="Game">
                     <div id="game"><img src="" alt=""></div>
                     <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
                 </div>
                 <div id="Game">
                     <div id="game"><img src="" alt=""></div>
                     <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
                 </div>
                 <div id="Game">
                     <div id="game"><img src="" alt=""></div>
                     <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
                 </div>
                 <div id="Game">
                     <div id="game"><img src="" alt=""></div>
                     <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
                 </div>
                 <div id="Game">
                     <div id="game"><img src="" alt=""></div>
                     <p style="margin: 0; color: white;">name</p>
-                    <p style="margin: 0; color: white;">price $</p>
                 </div>
 
             </div>
             
         </div>
-    </section>
+    </main>
     <footer>
         <a href="https://www.facebook.com/" target="_blank"><img src="images/fb_icon.webp" alt=""></a>
         <a href="https://www.instagram.com/" target="_blank"><img src="images/ig_icon.png" alt=""></a>
@@ -151,3 +147,7 @@
     
 </body>
 </html>
+
+
+
+
