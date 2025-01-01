@@ -112,24 +112,24 @@ section{
     top: 123px; 
     height: max-content;
     padding: 10px 0; 
-}
-
-#settings{
-    margin-top: 160%;
-}
-
-#logout{
+  }
+  
+  #settings{
+    margin-top: 120px;
+  }
+  
+  #logout{
     margin-bottom: 2px;
-}
-
-.menu:hover{
+  }
+  
+  .menu:hover{
     width: 240px;
     #menuIcon{
         width: 14%;
     }
-}
-
-.menu div {
+  }
+  
+  .menu div {
     background-color: rgb(59, 59, 59);
     margin: 4px;
     height: 50px;
@@ -138,23 +138,23 @@ section{
     margin-top: 5px;
     align-items: center;
     cursor: pointer;
-}
-
-
-
+  }
+  
+  
+  
 #menuIcon {
     height: 80%; 
     width: 75%; 
     margin-left: 5px;
     margin-right: 15px;
 }
-
+  
 #menuText {
     font-size: 20px; 
     font-family: Arial, Helvetica, sans-serif;
     color: gray;
 }
-
+  
 .menu :hover{
     background-color: white;
 }
