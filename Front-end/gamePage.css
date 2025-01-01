@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: rgb(17, 17, 17);
 }
 
 header {
@@ -9,8 +9,8 @@ header {
     align-items: center;
     justify-content: space-between; 
     border:0;
-    border-top: 5px black solid;
-    border-bottom: 10px black solid;
+    border-top: 5px rgb(17, 17, 17) solid;
+    border-bottom: 10px rgb(17, 17, 17) solid;
     background-image: linear-gradient(rgb(51, 51, 51),rgb(84, 84, 84)); 
     position: sticky;
     top: 0px;
@@ -160,15 +160,13 @@ section{
 }
 
 .container {
-    background-color: rgb(59, 59, 59);
-    border: solid;
+    background-color: rgb(17, 17, 17);
     border-radius: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 15%;
     display: flex;
     flex-wrap: wrap;
     row-gap: 5%;
-    flex-grow: 1;
-    overflow: hidden;   
+    flex-grow: 1;   
 }
 
 .images_container {
@@ -179,7 +177,7 @@ section{
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 10px;
-    background-color: black;
+    background-color: rgb(17, 17, 17);
     border-radius: 10px;
 }
 
@@ -216,8 +214,10 @@ section{
     align-items: center; 
     padding: 0;
     row-gap: 2%;
-    background-color: rgba(0, 0, 0, 0.301);
+    background-color: rgb(17, 17, 17);
     border-radius: 10px;
+    position: sticky;
+    top: 123px;
 }
 
 .buy_container img{
@@ -258,6 +258,73 @@ section{
 }
 #cart_button:hover{
     background-color: rgb(80, 80, 80);
+}
+
+h1{
+    color: white;
+    width: 60%;
+    font-family:'figtree',sans-serif;
+    font-size: 35px;
+    margin-left: 6.5%;
+    margin-bottom: 0;
+}
+
+.description h2{
+    color: white;
+    width: 60%;
+    font-family:'figtree',sans-serif;
+    font-size: 25px;
+    margin-left: 6.5%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.description button{
+    border: none;
+    background-color:rgb(83, 83, 83);
+    margin-top: 1%;
+    font-size: 14px;
+    font-family: 'figtree',sans-serif;
+    color: white;
+    border-radius: 4px;
+}
+.description p{
+    color: white;
+    width: 50%;
+    margin-left: 6.5%;
+    margin-bottom: 0;
+    font-size: 18px ;
+    font-family: 'figtree',sans-serif;
+}
+
+.System_requirement h2{
+    color: white;
+    font-family:'figtree',sans-serif;
+    font-size: 25px;
+    margin-left: 6%;
+    margin-top: 0;
+    width: 100%;
+}
+
+.System_requirement table{
+    background-color: rgba(83, 83, 83, 0.324);
+    font-family:'figtree',sans-serif;
+    color: white;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 6%;
+    th, td {
+        width: 50%;
+        vertical-align: top;
+        padding: 2%;
+    }
+    th{
+        font-size: larger;
+    }
+    td{
+        font-size: medium;
+    }
 }
 
 footer{
