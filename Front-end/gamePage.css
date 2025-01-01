@@ -3,19 +3,21 @@ body{
 }
 
 header {
-    height: 110px;
-    border-radius: 10px 10px 0 0;
+    height: 130px;
+    margin-bottom: 15px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     justify-content: space-between; 
     border:0;
     border-top: 5px rgb(17, 17, 17) solid;
     border-bottom: 10px rgb(17, 17, 17) solid;
+=======
+    justify-content: space-between;
+    border: inherit solid 5px;
+>>>>>>> 1678faf346e6169642dc8b6e4ec6c4dd72910121
     background-image: linear-gradient(rgb(51, 51, 51),rgb(84, 84, 84)); 
-    position: sticky;
-    top: 0px;
-    z-index: 2;
-    
 }
 header div{
     display: flex;
@@ -94,44 +96,21 @@ header div input {
 
 section{
     display: flex;
-    flex-grow: 1;
 }
 
 .menu {
     border-radius: 10px;
-    width: 70px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     margin-right: 15px;
     background-color: rgb(59, 59, 59);
     overflow: hidden;
-    transition: width 0.5s;
-    flex-shrink: 0;
-    position: sticky;
-    top: 123px; 
-    height: max-content;
-    padding: 10px 0; 
-}
-
-#settings{
-    margin-top: 120px;
-}
-
-#logout{
-    margin-bottom: 2px;
-}
-
-.menu:hover{
-    width: 240px;
-    #menuIcon{
-        width: 14%;
-    }
 }
 
 .menu div {
     background-color: rgb(59, 59, 59);
-    margin: 4px;
     height: 50px;
     border-radius: 10px;
     display: flex;
@@ -140,11 +119,9 @@ section{
     cursor: pointer;
 }
 
-
-
 #menuIcon {
     height: 80%; 
-    width: 75%; 
+    width: 14%; 
     margin-left: 5px;
     margin-right: 15px;
 }
@@ -155,8 +132,9 @@ section{
     color: gray;
 }
 
-.menu div:hover{
+.menu :hover{
     background-color: white;
+<<<<<<< HEAD
 }
 
 .container {
@@ -368,4 +346,6 @@ footer img:hover {
 .footerDiv p:hover{
     cursor: pointer;
     font-size: 17px;
+=======
+>>>>>>> 1678faf346e6169642dc8b6e4ec6c4dd72910121
 }
