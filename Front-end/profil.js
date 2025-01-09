@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         // Si c’est "payment", on redirige (exemple vers une page fictive)
         if (field === "payment") {
-          window.location.href = "paiement.html";
+          window.location.href = "payment.html";
           return;
         }
   
