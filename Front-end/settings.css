@@ -1,6 +1,5 @@
 body{
-    background-color: rgb(17, 17, 17);
-    
+    background-color: black;
 }
 
 header {
@@ -16,6 +15,7 @@ header {
     position: sticky;
     top: 0px;
     z-index: 2;
+    
 }
 header div{
     display: flex;
@@ -94,6 +94,7 @@ header div input {
 
 section{
     display: flex;
+    flex-grow: 1;
 }
 
 .menu {
@@ -111,24 +112,24 @@ section{
     top: 123px; 
     height: max-content;
     padding: 10px 0; 
-}
-
-#settings{
+  }
+  
+  #settings{
     margin-top: 120px;
-}
-
-#logout{
+  }
+  
+  #logout{
     margin-bottom: 2px;
-}
-
-.menu:hover{
+  }
+  
+  .menu:hover{
     width: 240px;
     #menuIcon{
         width: 14%;
     }
-}
-
-.menu div {
+  }
+  
+  .menu div {
     background-color: rgb(59, 59, 59);
     margin: 4px;
     height: 50px;
@@ -137,207 +138,100 @@ section{
     margin-top: 5px;
     align-items: center;
     cursor: pointer;
-}
-
+  }
+  
+  
+  
 #menuIcon {
     height: 80%; 
     width: 75%; 
     margin-left: 5px;
     margin-right: 15px;
 }
-
+  
 #menuText {
     font-size: 20px; 
     font-family: Arial, Helvetica, sans-serif;
     color: gray;
 }
-
-.menu div:hover{
+  
+.menu :hover{
     background-color: white;
 }
 
-.container {
-    background-color: rgb(17, 17, 17);
+
+.Listegames{
+    background-color: rgb(59, 59, 59);
     border-radius: 10px;
-    padding-bottom: 15%;
+    width:100%;
+    padding-bottom: 5%;
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 5%;
-    flex-grow: 1;   
+    flex-direction: column;
+    column-gap: 20px;
+    flex-grow: 1;
     overflow: hidden;
 }
 
-.images_container {
-    margin: 10px;
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 10px;
-    background-color: rgb(17, 17, 17);
-    border-radius: 10px;
-}
-
-#big_image{
-    width: 80%;
-    height: 65%;
-    border-radius: 10px;
-}
-
-#big_image img{
-    height: 100%;
-    width: 100%;
-    border-radius: 7px;
-}
-
-.small_image{
-    width: 20%;
-    height: 24%;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.small_image img{
-    height: 100%;
-    width: 100%;
-    border-radius: 7px;
-}
-
-.buy_container {
-    margin: 10px;
-    width: 35%;  
-    height: 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    padding: 0;
-    row-gap: 2%;
-    background-color: rgb(17, 17, 17);
-    border-radius: 10px;
-}
-
-.buy_container img{
-    height: 60%;
-    padding: 5px;
-}
-
-.buy_container p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-    margin: 0;
-    font-size: 24px;
-}
-
-.buy_container button{
-    width: 60%;
-    height: 10%;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-#buy_button{
-    background-color: rgb(0, 102, 255);
-    color: white;
-    font-size: 22px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s;
-}
-#buy_button:hover{
-    background-color: rgb(28, 119, 255);
-}
-
-#cart_button{
-    background-color: rgb(59, 59, 59);
-    color: white;
-    font-size: 22px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s;
-
-}
-#cart_button:hover{
-    background-color: rgb(80, 80, 80);
-}
-
-#wishList_button{
+.dark-mode {
     background-color: white;
+}
+
+.dark-mode .menu  {
+    background-color: rgb(177, 177, 177);
+}
+
+.dark-mode .menu div{
+    background-color: rgb(177, 177, 177);
+}
+.dark-mode .menu :hover{
+    background-color: white;
+}
+
+.dark-mode header {
+    border-top: 5px white solid;
+    border-bottom: 10px white solid;
+    background-image: linear-gradient(rgb(177, 177, 177), rgb(177, 177, 177)); 
+}
+
+.dark-mode footer {
+    background-color: rgb(177, 177, 177);
+}
+
+.dark-mode h2, .dark-mode .theme, .dark-mode .footerTxt, .dark-mode .footerDiv p {
     color: black;
-    font-size: 22px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s;
-
+}
+.dark-mode .Listegames{
+    background-color: rgb(177, 177, 177);
 }
 
-#wishList_button:hover{
-    background-color: rgb(206, 205, 205);
-}
 
-h1{
+h2{
     color: white;
-    width: 60%;
-    font-family:'figtree',sans-serif;
-    font-size: 35px;
-    margin-left: 6.5%;
-    margin-bottom: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.theme{
+    color: white;
+    margin-left: 5%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1%;
 }
 
-.description h2{
-    color: white;
-    width: 60%;
-    font-family:'figtree',sans-serif;
-    font-size: 25px;
-    margin-left: 6.5%;
-    margin-bottom: 0;
-    margin-top: 0;
+.fontsize{
+    margin-left: 5%;
+    width: 12%;
+    height: 7%;
+    font-size: 16px;
 }
 
-.description button{
-    border: none;
-    background-color:rgb(83, 83, 83);
-    margin-top: 1%;
-    font-size: 14px;
-    font-family: 'figtree',sans-serif;
-    color: white;
-    border-radius: 4px;
-}
-.description p{
-    color: white;
-    width: 50%;
-    margin-left: 6.5%;
-    margin-bottom: 0;
-    font-size: 18px ;
-    font-family: 'figtree',sans-serif;
-}
-
-.System_requirement h2{
-    color: white;
-    font-family:'figtree',sans-serif;
-    font-size: 25px;
-    margin-left: 6%;
-    margin-top: 0;
-    width: 100%;
-}
-
-.System_requirement table{
-    background-color: rgba(83, 83, 83, 0.324);
-    font-family:'figtree',sans-serif;
-    color: white;
-    width: 50%;
-    border-radius: 10px;
-    text-align: center;
-    margin-left: 6%;
-    th, td {
-        width: 50%;
-        vertical-align: top;
-        padding: 2%;
-    }
-    th{
-        font-size: larger;
-    }
-    td{
-        font-size: medium;
-    }
+.lang{
+    margin-left: 5%;
+    width: 12%;
+    height: 7%;
+    font-size: 16px;
 }
 
 footer{

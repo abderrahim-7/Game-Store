@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Games World - Paiement</title>
+  <!-- Lien vers ton CSS (ex. payment.css) -->
+  <link rel="stylesheet" href="buy.css">
+  <!-- Script JS (ex. payment.js) -->
+  <script src="buy.js" defer></script>
+  <link rel="icon" href="images/8695383.png">
+</head>
+<body>
+
+  <!-- HEADER rapide (ou réutilise ton header existant) -->
+  <header>
+    <div>
+      <img src="images/page_logo.png" alt="Logo du site" style="width:60px; height:60px;">
+      <h1>Payment methods</h1>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    
+    
+    <!-- SECTION : Moyens de paiement existants -->
+    <section class="payment-methods">
+      <h2>Mes moyens de paiement</h2>
+
+      <!-- Liste dynamique où on affiche chaque moyen (Visa, MasterCard, etc.) -->
+      <div class="payment-list">
+        <!-- 
+          Au départ, c'est vide ou contient une structure de base.
+          Le JS va remplir/mettre à jour automatiquement via renderPaymentList().
+        -->
+      </div>
+
+      <!-- Bouton “Ajouter un moyen de paiement” -->
+      <button class="add-payment-btn" id="showPaymentFormBtn">
+        Ajouter/Modifier un moyen de paiement
+      </button>
+    </section>
+
+    <!-- SECTION : Formulaire d’ajout, cachée par défaut -->
+    <section class="payment-form" id="paymentFormSection" style="display: none;">
+      <h2>Ajouter un moyen de paiement</h2>
+
+      <!-- Formulaire -->
+      <form id="paymentForm">
+        <!-- Sélecteur du type de paiement -->
+        <label for="paymentType">Type de paiement :</label>
+        <select id="paymentType">
+          <option value="">-- Choisir --</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">MasterCard</option>
+          <option value="paypal">PayPal</option>
+        </select>
+
+        <!-- Numéro de carte (ou email PayPal) -->
+        <label for="cardNumber">Numéro de carte ou compte :</label>
+        <input type="text" id="cardNumber">
+        
+        <!-- Date d’expiration -->
+        <label for="cardExpiry">Date d’expiration (MM/AA) :</label>
+        <input 
+          type="text" 
+          id="cardExpiry" 
+          placeholder="MM/AA">
+
+        <!-- CVV -->
+        <label for="cardCVV" id="cvvLabel">CVV :</label>
+        <input 
+          type="password" 
+          id="cardCVV" 
+          placeholder="3 chiffres">
+
+        <!-- Boutons Enregistrer / Annuler -->
+        <div style="margin-top: 1rem;">
+          <button type="submit" class="save-payment-btn">Enregistrer</button>
+          <button type="button" class="cancel-payment-btn" id="cancelPaymentBtn">
+            Annuler
+          </button>
+        </div>
+      </form>
+    </section>
+    <section class="buttons">
+        <button id="Cancel">Cancel</button>
+        <button id = "Confirm">Confirm</button>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="https://www.facebook.com/" target="_blank"><img src="images/fb_icon.webp" alt=""></a>
+    <a href="https://www.instagram.com/" target="_blank"><img src="images/ig_icon.png" alt=""></a>
+    <a href="https://x.com/?lang=en" target="_blank"><img src="images/x_icon.webp" alt=""></a>
+    <p class="footerTxt">© 2024, Games World, Inc. Tous droits réservés. World, Games World, le logo Games World, Fortnite, le logo Fortnite, Unreal, Unreal Engine, le logo Unreal Engine, Unreal Tournament, et le logo Unreal Tournament sont des marques ou des marques déposées de Games World, Inc. aux États-Unis et ailleurs. Les autres marques ou noms de produit appartiennent à leurs propriétaires respectifs.   Nos sites Web peuvent contenir des liens vers d'autres sites et ressources fournis par des tierces parties. Ces liens ne sont fournis que pour votre commodité. Epic Games n'a aucun contrôle sur le contenu de ces sites ou ressources, et n'accepte aucune responsabilité pour eux ou pour toute perte ou dommage pouvant découler de leur usage. </p>
+    <div class="footerDiv">
+        <p>Conditions d'utilisation</p>
+        <p>Politique de confidentialité</p>
+        <p>Politique de remboursement</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

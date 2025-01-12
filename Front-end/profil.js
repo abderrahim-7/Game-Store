@@ -81,3 +81,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   
+
+  const Home = document.getElementById("home")
+  const Profile = document.getElementById("profile")
+  const Cart = document.getElementById("cart")
+  const Setting = document.getElementById("setting")
+  const LogOut = document.getElementById("logout")
+
+
+settings.addEventListener("click",function(){
+    window.location.href = "settings.html"
+})
+  
+  Home.addEventListener("click",function(){ 
+      window.location.href = "index.html"
+  })
+  Profile.addEventListener("click",function(){
+      window.location.href = "profil.html"
+  })
+  Cart.addEventListener("click",function(){
+      window.location.href = "cart.html"
+  })
+  
+
+  const search = document.getElementById("SearchButton")
+search.addEventListener("click",function(){
+    window.location.href = 'recherche.html'
+})
+  

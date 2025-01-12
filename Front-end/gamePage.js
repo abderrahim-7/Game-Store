@@ -32,3 +32,33 @@ for (let i = 0;i<4;i++){
         bigImage.innerHTML = smallImages[i].innerHTML
     })
 }
+
+const Home = document.getElementById("home")
+const Profile = document.getElementById("profile")
+const Cart = document.getElementById("cart")
+const settings = document.getElementById("settings")
+
+settings.addEventListener("click",function(){
+    window.location.href = "settings.html"
+})
+
+Home.addEventListener("click",function(){ 
+    window.location.href = "index.html"
+})
+Profile.addEventListener("click",function(){
+    window.location.href = "profil.html"
+})
+Cart.addEventListener("click",function(){
+    window.location.href = "cart.html"
+})
+
+
+const buyButton = document.getElementById("buy_button")
+buyButton.addEventListener('click',function(){
+    window.location.href = "buy.html"
+})
+
+const search = document.getElementById("SearchButton")
+search.addEventListener("click",function(){
+    window.location.href = 'recherche.html'
+})
