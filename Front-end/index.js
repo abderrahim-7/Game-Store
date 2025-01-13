@@ -160,7 +160,6 @@ function createGameDiv(game) {
   const pPrix = document.createElement('p');
   pPrix.style.margin = '0';
   pPrix.style.color = 'white';
-  // Suppose que game.prix est un nombre
   pPrix.textContent = game.prix ? `${game.prix} $` : '?? $';
 
   // Ajouter chaque élément dans le container

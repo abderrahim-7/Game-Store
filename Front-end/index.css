@@ -232,6 +232,16 @@ section{
     align-items: center;
 }
 
+#Game{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
 #game {
     height: 230px;
     width: 170px;
