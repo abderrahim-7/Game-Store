@@ -25,5 +25,120 @@ menu[0].addEventListener("mouseleave",function(){
     }
 })
 
+// Quand la page est chargée, on exécute la fonction init()
+document.addEventListener('DOMContentLoaded', init);
+
+function init() {
+  // 1) Charger la section Recommended
+  loadRecommended();
+
+  // 2) Charger la section Sales
+  loadSales();
+
+  // 3) Charger la section New
+  loadNew();
+}
+
+async function loadRecommended() {
+  try {
+    // On récupère la liste des jeux recommandés
+    const res = await fetch('/api/games/recommended');
+    const data = await res.json();
+
+    // data est un tableau d'objets (chaque objet représente un jeu)
+    const recommendedSection = document.querySelector('.Recommended');
+    // On vide la section d’éventuels anciens éléments
+    recommendedSection.innerHTML = '';
+
+    data.forEach(game => {
+      // Créer un bloc de jeu
+      const gameDiv = createGameDiv(game);
+      // L'ajouter à la section
+      recommendedSection.appendChild(gameDiv);
+    });
+  } catch (err) {
+    console.error('Erreur loadRecommended:', err);
+  }
+}
+
+async function loadSales() {
+  try {
+    const res = await fetch('/api/games/sales');
+    const data = await res.json();
+
+    const salesSection = document.querySelector('.Sales');
+    salesSection.innerHTML = '';
+
+    data.forEach(game => {
+      const gameDiv = createGameDiv(game);
+      salesSection.appendChild(gameDiv);
+    });
+  } catch (err) {
+    console.error('Erreur loadSales:', err);
+  }
+}
+
+async function loadNew() {
+  try {
+    const res = await fetch('/api/games/new');
+    const data = await res.json();
+
+    const newSection = document.querySelector('.New');
+    newSection.innerHTML = '';
+
+    data.forEach(game => {
+      const gameDiv = createGameDiv(game);
+      newSection.appendChild(gameDiv);
+    });
+  } catch (err) {
+    console.error('Erreur loadNew:', err);
+  }
+}
+
+/**
+ * Crée un bloc <div> (ou structure) pour représenter un jeu dans le DOM
+ * @param {Object} game un objet JSON : { id_jeu, nom, prix, image, ... }
+ */
+function createGameDiv(game) {
+  // Ex: 
+  // <div id="Game">
+  //   <div id="game"><img src="game.image" /></div>
+  //   <p>game.nom</p>
+  //   <p>game.prix $</p>
+  // </div>
+
+  const divGameContainer = document.createElement('div');
+  divGameContainer.id = 'Game'; 
+
+  const divGameImgWrapper = document.createElement('div');
+  divGameImgWrapper.id = 'game';
+
+  const img = document.createElement('img');
+  // Si game.image est un chemin (ex: "/uploads/monJeu.png")
+  // ou une URL absolue (ex: "https://...") :
+  img.src = game.image || 'images/no_image.png'; // fallback si pas d'image
+
+  divGameImgWrapper.appendChild(img);
+
+  const pNom = document.createElement('p');
+  pNom.style.margin = '0';
+  pNom.style.color = 'white';
+  pNom.textContent = game.nom || 'Nom du jeu';
+
+  const pPrix = document.createElement('p');
+  pPrix.style.margin = '0';
+  pPrix.style.color = 'white';
+  // Suppose que game.prix est un nombre
+  pPrix.textContent = game.prix ? `${game.prix} $` : '?? $';
+
+  // Ajouter chaque élément dans le container
+  divGameContainer.appendChild(divGameImgWrapper);
+  divGameContainer.appendChild(pNom);
+  divGameContainer.appendChild(pPrix);
+
+  return divGameContainer;
+}
+
+
 
 
