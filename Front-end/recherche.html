@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profil.css">
-    <script src="profil.js" defer></script>
+    <link rel="stylesheet" href="recherche.css">
+    <script src="recherche.js" defer></script>
     <title>Game Store</title>
     <link rel="icon" href="images/8695383.png">
     
@@ -17,15 +17,18 @@
                 <input type="text" placeholder="search here..." class="whiteShadow">
                 <button class="whiteShadow" id="SearchButton"><img src="images/search_Icon.png" alt="" id="SearchIcon"></button>
             </div>
-
+            <div>
+                <a href="login.html"><button class="whiteShadow" id="LoginButton">Login</button></a>
+                <a href="registre.html"> <button class="whiteShadow" id="RegisterButton" >Register</button> </a>
+            </div>
     </header>
 
-    <main>
+    <section>
         <div class="menu">
-            <div class="menuDiv" "onclick="window.location.href='index.html'" id= "home" >
+            <div class="menuDiv" id= "home" >
                 <img src="images/home_icon.png" alt="" id="menuIcon">
             </div>
-            <div class="menuDiv" id = "profile" style="background-color: white;">
+            <div class="menuDiv" id = "profile" >
                 <img src="images/profile_Icon.png" alt="" id="menuIcon">
             </div>
             <div class="menuDiv" id="cart">
@@ -34,51 +37,13 @@
                 <div class="menuDiv" id="settings">
                     <img src="images/settings_Icon.png" alt="" id="menuIcon">
                 </div>
+
             <div class="menuDiv" id="logout">
                 <img src="images/logout_Icon.png" alt="" id="menuIcon">
             </div>
         </div>
-        
-        <div class="Listegames">
-          <section class="profile-card">
-            <div class="profile-avatar">
-              <img src="images/avatar1.png" alt="Avatar de l'utilisateur" />
-            </div>
-    
-            <div class="profile-info">
-              <!-- EMAIL -->
-              <div class="profile-field">
-                <label>Email :</label>
-                <span id="profileEmailValue">AlexW@gmail.com</span>
-                <input type="email" id="profileEmailInput" class="profile-edit-input" style="display: none;" />
-                <button class="edit-field-btn" data-field="email">
-                  <img src="images/crayon.png" alt="Edit" />
-                </button>
-              </div>
-    
-              <!-- PSEUDONYME -->
-              <div class="profile-field">
-                <label>Pseudonyme :</label>
-                <span id="profilePseudoValue">Alex White</span>
-                <input type="text" id="profilePseudoInput" class="profile-edit-input" style="display: none;" />
-                <button class="edit-field-btn" data-field="pseudo">
-                  <img src="images/crayon.png" alt="Edit" />
-                </button>
-              </div>
-    
-              <!-- MOYEN DE PAIEMENT -->
-              <div class="profile-field">
-                <label>Moyen de paiement :</label>
-                <span id="profilePaymentValue"></span>
-                <button class="edit-field-btn" data-field="payment">
-                  <img src="images/crayon.png" alt="Edit" />
-                </button>
-              </div>
-            </div>
-          </section>
 
-            <h2>WishList</h2>
-            <div class="Recommended">
+        <div class="Listegames"  style="flex-wrap: wrap;">
                 <div id="Game">
                     <div id="game"><img src="images/games/Grand_Theft_Auto_V/0.png" alt=""></div>
                     <p style="margin: 0; color: white;">Grand Theft Auto V</p>
@@ -86,11 +51,6 @@
                 </div>
                 <div id="Game">
                     <div id="game"><img src="images/games/game fifa 2024.png" alt=""></div>
-                    <p style="margin: 0; color: white;">FIFA 2024</p>
-                    <p style="margin: 0; color: white;">45.78 $</p>
-                </div>
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
                     <p style="margin: 0; color: white;">name</p>
                     <p style="margin: 0; color: white;">price $</p>
                 </div>
@@ -103,36 +63,11 @@
                     <div id="game"><img src="" alt=""></div>
                     <p style="margin: 0; color: white;">name</p>
                     <p style="margin: 0; color: white;">price $</p>
-                </div>
-            </div>
-
-            <h2>Bibliothèque</h2>
-            <div class="New">
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
-                </div>
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
-                </div>
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
-                </div>
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
-                </div>
-                <div id="Game">
-                    <div id="game"><img src="" alt=""></div>
-                    <p style="margin: 0; color: white;">name</p>
                 </div>
 
-            </div>
-            
+                
         </div>
-    </main>
+    </section>
     <footer>
         <a href="https://www.facebook.com/" target="_blank"><img src="images/fb_icon.webp" alt=""></a>
         <a href="https://www.instagram.com/" target="_blank"><img src="images/ig_icon.png" alt=""></a>
@@ -147,7 +82,3 @@
     
 </body>
 </html>
-
-
-
-

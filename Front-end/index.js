@@ -24,6 +24,38 @@ menu[0].addEventListener("mouseleave",function(){
         }
     }
 })
+const Home = document.getElementById("home")
+const Profile = document.getElementById("profile")
+const Cart = document.getElementById("cart")
+const Setting = document.getElementById("setting")
+const LogOut = document.getElementById("logout")
+
+settings.addEventListener("click",function(){
+    window.location.href = "settings.html"
+})
+Home.addEventListener("click",function(){ 
+    window.location.href = "index.html"
+})
+Profile.addEventListener("click",function(){
+    window.location.href = "profil.html"
+})
+Cart.addEventListener("click",function(){
+    window.location.href = "cart.html"
+})
+
+
+const game = document.getElementsByClassName("Game")
+for(let i = 0;i<game.length;i++){
+    game[i].addEventListener('click',function(){
+        window.location.href = "gamePage.html"
+    })
+}
+
+const search = document.getElementById("SearchButton")
+search.addEventListener("click",function(){
+    window.location.href = 'recherche.html'
+})
+
 
 // Quand la page est chargée, on exécute la fonction init()
 document.addEventListener('DOMContentLoaded', init);

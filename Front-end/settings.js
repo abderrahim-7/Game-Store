@@ -25,22 +25,9 @@ menu[0].addEventListener("mouseleave",function(){
     }
 })
 
-const smallImages = document.getElementsByClassName("small_image")
-const bigImage = document.getElementById("big_image")
-for (let i = 0;i<4;i++){
-    smallImages[i].addEventListener('click',function(){
-        bigImage.innerHTML = smallImages[i].innerHTML
-    })
-}
-
 const Home = document.getElementById("home")
 const Profile = document.getElementById("profile")
 const Cart = document.getElementById("cart")
-const settings = document.getElementById("settings")
-
-settings.addEventListener("click",function(){
-    window.location.href = "settings.html"
-})
 
 Home.addEventListener("click",function(){ 
     window.location.href = "index.html"
@@ -52,13 +39,29 @@ Cart.addEventListener("click",function(){
     window.location.href = "cart.html"
 })
 
-
-const buyButton = document.getElementById("buy_button")
-buyButton.addEventListener('click',function(){
-    window.location.href = "buy.html"
-})
-
 const search = document.getElementById("SearchButton")
 search.addEventListener("click",function(){
     window.location.href = 'recherche.html'
 })
+
+
+
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+}
+
+const txt = document.getElementsByTagName('h2')
+const input = document.getElementsByTagName('input')
+const size = document.getElementsByClassName('fontsize')
+size[0].addEventListener("change",function(){
+    for (let i = 0; i<txt.length;i++){
+        txt[i].style.fontSize = size[0].value
+    }
+    for (let i = 0; i<input.length;i++){
+        input[i].style.fontSize = size[0].value
+    }
+})
+
+function changeLanguage(lang) {
+    alert("Language changed to " + lang);
+}

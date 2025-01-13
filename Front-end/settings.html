@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="settings.css">
+    <script src="settings.js" defer></script>
+    <title>Game Store</title>
+    <link rel="icon" href="images/8695383.png">
+    
+</head>
+<body>
+
+    <header>
+            <div>
+                <img src="images/page_logo.png" alt="">
+                <input type="text" placeholder="search here..." class="whiteShadow">
+                <button class="whiteShadow" id="SearchButton"><img src="images/search_Icon.png" alt="" id="SearchIcon"></button>
+            </div>
+            <div>
+                <a href="login.html"><button class="whiteShadow" id="LoginButton">Login</button></a>
+                <a href="registre.html"> <button class="whiteShadow" id="RegisterButton" >Register</button> </a>
+            </div>
+    </header>
+
+    <section>
+        <div class="menu">
+            <div class="menuDiv" id= "home" >
+                <img src="images/home_icon.png" alt="" id="menuIcon">
+            </div>
+            <div class="menuDiv" id = "profile" >
+                <img src="images/profile_Icon.png" alt="" id="menuIcon">
+            </div>
+            <div class="menuDiv" id="cart">
+                <img src="images/cart_Icon.png" alt="" id="menuIcon">
+            </div>
+            <div class="menuDiv" id="settings" style="background-color: white;">
+                <img src="images/settings_Icon.png" alt="" id="menuIcon">
+            </div>
+            <div class="menuDiv" id="logout">
+                <img src="images/logout_Icon.png" alt="" id="menuIcon">
+            </div>
+        </div>
+
+        <div class="Listegames"  style="flex-wrap: wrap;">
+            <h2>Theme</h2>
+            <label class="theme">
+                <input type="radio" name="theme" onchange="toggleTheme()" checked> Dark Mode
+            </label>
+            <label class="theme">
+                <input type="radio" name="theme" onchange="toggleTheme()"> Light Mode
+            </label>
+            <h2>Font size</h2>
+            <select onchange="changeFontSize(this.value)" class="fontsize">
+                <option value="18px">Small</option>
+                <option value="24px" selected>Medium</option>
+                <option value="30px">Large</option>
+            </select>
+            <h2>Language</h2>
+            <select onchange="changeLanguage(this.value)" class="lang">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+            </select>
+            
+
+        </div>
+    </section>
+    <footer>
+        <a href="https://www.facebook.com/" target="_blank"><img src="images/fb_icon.webp" alt=""></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="images/ig_icon.png" alt=""></a>
+        <a href="https://x.com/?lang=en" target="_blank"><img src="images/x_icon.webp" alt=""></a>
+        <p class="footerTxt">© 2024, Games World, Inc. Tous droits réservés. World, Games World, le logo Games World, Fortnite, le logo Fortnite, Unreal, Unreal Engine, le logo Unreal Engine, Unreal Tournament, et le logo Unreal Tournament sont des marques ou des marques déposées de Games World, Inc. aux États-Unis et ailleurs. Les autres marques ou noms de produit appartiennent à leurs propriétaires respectifs.   Nos sites Web peuvent contenir des liens vers d'autres sites et ressources fournis par des tierces parties. Ces liens ne sont fournis que pour votre commodité. Epic Games n'a aucun contrôle sur le contenu de ces sites ou ressources, et n'accepte aucune responsabilité pour eux ou pour toute perte ou dommage pouvant découler de leur usage. </p>
+        <div class="footerDiv">
+            <p>Conditions d'utilisation</p>
+            <p>Politique de confidentialité</p>
+            <p>Politique de remboursement</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

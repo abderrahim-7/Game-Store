@@ -239,6 +239,7 @@ main{
   background-color: aliceblue;
   cursor: pointer;
   transition: height 0.3s, width 0.3s;
+  
 }
 
 #game:hover{

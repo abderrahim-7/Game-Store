@@ -25,14 +25,6 @@ menu[0].addEventListener("mouseleave",function(){
     }
 })
 
-const smallImages = document.getElementsByClassName("small_image")
-const bigImage = document.getElementById("big_image")
-for (let i = 0;i<4;i++){
-    smallImages[i].addEventListener('click',function(){
-        bigImage.innerHTML = smallImages[i].innerHTML
-    })
-}
-
 const Home = document.getElementById("home")
 const Profile = document.getElementById("profile")
 const Cart = document.getElementById("cart")
@@ -51,9 +43,14 @@ Profile.addEventListener("click",function(){
 Cart.addEventListener("click",function(){
     window.location.href = "cart.html"
 })
+const removeButton = document.getElementsByClassName("remove")
+for (let i = 0;i<removeButton.length;i++){
+    removeButton[i].addEventListener("click",function(){
+        this.parentElement.remove()
+    })
+}
 
-
-const buyButton = document.getElementById("buy_button")
+const buyButton = document.getElementById("buyAll")
 buyButton.addEventListener('click',function(){
     window.location.href = "buy.html"
 })
@@ -62,3 +59,5 @@ const search = document.getElementById("SearchButton")
 search.addEventListener("click",function(){
     window.location.href = 'recherche.html'
 })
+
+
