@@ -13,7 +13,8 @@ DB_PASSWORD=votre mot de passe postgresql
 DB_NAME=BDweb (le nom de la base de données)
 PORT=3000
 5-ouvrir un terminal dans le dossier backend
-6-taper node index.js dans le terminal
+6-taper npm install pour installer les modules
+7-taper node index.js dans le terminal
 Maintenant le site sera accessible dans le navigateur avec l'adresse : http://localhost:3000
 
 
