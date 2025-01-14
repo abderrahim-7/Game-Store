@@ -61,3 +61,95 @@ search.addEventListener("click",function(){
 })
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    loadCart(); // Charger les jeux dans le panier
+    setupBuyAll(); // Configurer le bouton "Buy All"
+  });
+  
+  function loadCart() {
+    const cartContainer = document.querySelector('.Listegames'); // Conteneur des jeux
+    const cart = JSON.parse(localStorage.getItem('cart')) || []; // Récupérer le panier depuis localStorage
+  
+    // Supprimer tous les anciens éléments, mais conserver le bouton "Buy All"
+    cartContainer.innerHTML = `
+      <div style="display: flex; justify-content: center;">
+        <button id="buyAll">Buy All</button>
+      </div>
+    `;
+  
+    if (cart.length === 0) {
+      const emptyMessage = document.createElement('p');
+      emptyMessage.textContent = 'Votre panier est vide.';
+      emptyMessage.style.color = 'white';
+      emptyMessage.style.textAlign = 'center';
+      cartContainer.appendChild(emptyMessage);
+      return;
+    }
+  
+    cart.forEach(game => {
+      const gameDiv = createGameDiv(game);
+      cartContainer.appendChild(gameDiv);
+    });
+  }
+  
+  function createGameDiv(game) {
+    const divGameContainer = document.createElement('div');
+    divGameContainer.id = 'Game'; 
+  
+    const divGameImgWrapper = document.createElement('div');
+    divGameImgWrapper.id = 'game';
+  
+    const img = document.createElement('img');
+    img.src = game.image || 'images/no_image.png'; // Image par défaut si absente
+    img.alt = game.nom || 'Jeu';
+  
+    divGameImgWrapper.appendChild(img);
+  
+    const pNom = document.createElement('p');
+    pNom.style.margin = '0';
+    pNom.style.color = 'white';
+    pNom.textContent = game.nom || 'Nom du jeu';
+  
+    const pPrix = document.createElement('p');
+    pPrix.style.margin = '0';
+    pPrix.style.color = 'white';
+    pPrix.textContent = game.prix ? `${game.prix} $` : 'Prix inconnu';
+  
+    // Ajouter un bouton pour retirer le jeu du panier
+    const removeBtn = document.createElement('button');
+    removeBtn.classList.add('remove-btn'); // Utilisez une classe pour personnaliser dans cart.css
+    removeBtn.textContent = 'x';
+    removeBtn.onclick = () => removeFromCart(game.id_jeu);
+  
+    // Ajouter les éléments au container
+    divGameContainer.appendChild(divGameImgWrapper);
+    divGameContainer.appendChild(pNom);
+    divGameContainer.appendChild(pPrix);
+    divGameContainer.appendChild(removeBtn);
+  
+    return divGameContainer;
+  }
+  
+  function removeFromCart(id_jeu) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const updatedCart = cart.filter(game => game.id_jeu !== id_jeu); // Retirer le jeu
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); // Mettre à jour le stockage
+    loadCart(); // Recharger l'affichage
+  }
+  
+  function setupBuyAll() {
+    const buyAllButton = document.getElementById('buyAll');
+    buyAllButton.addEventListener('click',function(){
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        if (cart.length === 0) {
+            alert('Votre panier est vide.');
+            return;
+        }
+        window.location.href = "buy.html"
+    })
+
+     }
+  
+
+

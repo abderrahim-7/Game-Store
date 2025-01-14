@@ -127,6 +127,28 @@ async function loadNew() {
   }
 }
 
+function addToCart(game) {
+  // Charger le panier existant ou initialiser un nouveau panier
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Vérifier si le jeu est déjà dans le panier
+  const existingGame = cart.find(item => item.id_jeu === game.id_jeu);
+  if (existingGame) {
+    alert(`${game.nom} est déjà dans le panier.`);
+    return;
+  }
+
+  // Ajouter le jeu au panier
+  cart.push(game);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${game.nom} a été ajouté au panier.`);
+  // Optionnel : Cacher le bouton après l'ajout
+  document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+    btn.style.display = 'none';
+  });
+}
+
+
 /**
  * Crée un bloc <div> (ou structure) pour représenter un jeu dans le DOM
  * @param {Object} game un objet JSON : { id_jeu, nom, prix, image, ... }
@@ -162,13 +184,27 @@ function createGameDiv(game) {
   pPrix.style.color = 'white';
   pPrix.textContent = game.prix ? `${game.prix} $` : '?? $';
 
+    // Ajouter un bouton "Ajouter au panier"
+  const addToCartBtn = document.createElement('button');
+  addToCartBtn.textContent = 'Ajouter au panier';
+  addToCartBtn.classList.add('add-to-cart-btn');
+  addToCartBtn.style.display = 'none'; // Caché par défaut
+  addToCartBtn.onclick = () => addToCart(game);
+
+    // Afficher le bouton lorsque l'utilisateur clique ou survole
+  divGameContainer.addEventListener('click', () => {
+    addToCartBtn.style.display = 'block'; // Affiche le bouton
+   });
+
   // Ajouter chaque élément dans le container
   divGameContainer.appendChild(divGameImgWrapper);
   divGameContainer.appendChild(pNom);
   divGameContainer.appendChild(pPrix);
+  divGameContainer.appendChild(addToCartBtn);
 
   return divGameContainer;
 }
+
 
 
 
