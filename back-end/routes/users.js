@@ -15,15 +15,15 @@ router.get('/', async (req, res) => {
 
 // 2) POST /api/users : Créer un nouvel utilisateur
 router.post('/', async (req, res) => {
-  const { nom, mot_de_passe, date_naissance, pays } = req.body; 
+  const { nom, mot_de_passe, date_de_naissance, pays } = req.body; 
   try {
     // par exemple
     const query = `
-      INSERT INTO utilisateur (nom, mot_de_passe, date_naissance, pays)
+      INSERT INTO utilisateur (nom, mot_de_passe, date_de_naissance, pays)
       VALUES ($1, $2, $3, $4)
       RETURNING *
     `;
-    const values = [nom, mot_de_passe, date_naissance, pays];
+    const values = [nom, mot_de_passe, date_de_naissance, pays];
     const result = await pool.query(query, values);
 
     res.status(201).json(result.rows[0]);

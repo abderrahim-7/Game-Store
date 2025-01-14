@@ -2,6 +2,17 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db'); // <-- connexion PostgreSQL ou MySQL selon ton "db.js"
 
+router.get('/recommended', async (req, res) => {
+  try {
+      const query = `SELECT * FROM jeu WHERE is_recommended = true`;
+      const result = await pool.query(query);
+      res.json(result.rows);
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Erreur lors de la récupération des jeux recommende.' });
+}
+});
+
 router.get('/new', async (req, res) => {
     try {
         const query = `
@@ -18,16 +29,7 @@ router.get('/new', async (req, res) => {
     }    
 });
 
-router.get('/recommended', async (req, res) => {
-    try {
-        const query = `SELECT * FROM jeu WHERE is_recommended = true`;
-        const result = await pool.query(query);
-        res.json(result.rows);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Erreur lors de la récupération des jeux recommende.' });
-  }
-});
+
   
 router.get('/sales', async (req, res) => {
     try {
@@ -40,16 +42,7 @@ router.get('/sales', async (req, res) => {
       }
 });
 
-// 1) GET /api/games : Récupérer tous les jeux
-router.get('/', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM jeu ORDER BY id_jeu');
-    res.json(result.rows); // En PostgreSQL, "rows" contient les enregistrements
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Erreur lors de la récupération des jeux.' });
-  }
-});
+
 
 // 2) POST /api/games : Créer un nouveau jeu
 router.post('/', async (req, res) => {
