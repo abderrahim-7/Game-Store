@@ -181,6 +181,7 @@ section{
 }
 
 
+
 #Game{
     height: fit-content;
     width: fit-content;
@@ -210,29 +211,31 @@ section{
 }
 
 #buyAll{
-    width: 15%;
-    height: 20%;
-    border-radius: 10px;
-    border:none;
-    cursor: pointer;
+    background-color: #007bff;
     color: white;
-    background-color: rgb(0, 102, 255);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: large;
-    margin: 0;
-    padding: 0;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 
-.remove{
+.remove-btn {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgb(239, 68, 68);
+    background-color: red;
     color: white;
-    font-size: large;
-    cursor: pointer;
     border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+.remove-btn:hover {
+    background-color: darkred;
 }
 
 footer{

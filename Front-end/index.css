@@ -261,6 +261,24 @@ section{
     width: inherit;
 }
 
+
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+  
+
+
 footer{
     margin-top: 15px;
     padding: 30px;
